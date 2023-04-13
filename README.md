@@ -20,7 +20,7 @@ You can also use the "C" button to clear the input fields or the "DEL" button to
 
 ## Credits
 
-This project was built by [Your Name Here] as part of a [course/ tutorial/ personal project]. Special thanks to [instructor/ mentor/ inspiration].
+This project was built by Najam ALi Abasss as part of a Introduction to Web Dev course statrted By Blockchain Society. Special thanks to Blockchain Society .
 
 ## License
 
