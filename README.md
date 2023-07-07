@@ -2,13 +2,13 @@
 
 This is a simple calculator app built using HTML, CSS, and JavaScript.
 
-## Technologies Used
+# Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## Project Overview
+# Project Overview
 
 The Calculator App is a web application that allows users to perform basic mathematical operations such as addition, subtraction, multiplication, and division. The app has a user-friendly interface that displays the results of the calculations in real-time.
 
