@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
 html, body {
-  height: 100%;
-  width: 100%;
   font-family: 'Roboto', sans-serif; 
   color: white;
   background-color: #7737f9;
+  min-width: 200px;
 }
 
 .button{
@@ -19,16 +18,35 @@ html, body {
   
 }
 
-.row{
+/* .row{
   margin: 0px 0px;
   
   
-}
+} */
 .row input{
   width: 270px;
   font-size: 20px;
-    margin: 0;
+  margin: 8px;
     padding: 6px 0px;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+
+@media (max-width: 400px) {
+  html, body { 
+    background-color: #e97222;
+    min-width: 200px;
+  }
+  .row input{
+    width: 200px;
+    font-size: 20px;
+      
+      border-radius: 5px;
+  }
+  .button{
+    width: 50px;
+    
+    
+  }
 }
