@@ -6,23 +6,61 @@ html, body {
   min-width: 200px;
 }
 
-.button{
-  width: 66px;
-  padding: 6px;
-  margin: auto;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 9px;
+.row input{
+  width: 300px;
+  height: 5px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  margin: 10px;
+  background-color: #faf5f5;
+  color: #000000;
+  font-size: 40px;
+  text-align: right;
   cursor: pointer;
-  background-color: rgb(78, 76, 76);
-  color: white;
-  
+}
+
+input::placeholder{
+  color: #ffffff;
+}
+
+button{
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background-color: #312d2d;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 100;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: -5px -6px 15px #000;
+  outline-offset: 1px;
+  cursor: pointer;
+}
+
+.opr{
+  color: #fbff00;
+  background: #1e1919;
+  font-weight: 700;
+}
+
+.eql{
+background: orangered;
+font-weight: 900;
+}
+
+
+.button:active{
+  background: #000;
+  transform: translate(2px, 2px);
 }
 
 .title {
   background: linear-gradient(75deg, #00e1ff88, #6f00ff73 48%, #ff686871);
   border-radius: 10px;
   padding: 5px 28px;
-  font-size: 25px;
+  font-size: 40px;
   margin-top: 10vh;
   margin-bottom: 2vh;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.444);
@@ -83,21 +121,10 @@ body {
 }
 
 .container {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-}
-
-
-.row input{
-  width: 270px;
-  font-size: 20px;
-  margin: 8px;
-    padding: 6px 0px;
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
 
