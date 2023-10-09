@@ -4,6 +4,9 @@ let inputString = '';
 // Initialize the variable to store the current memory value to zero
 let memoryValue = 0;
 
+// Select the input field
+const inputField = document.querySelector('input');
+
 // Select all the calculator buttons on the page
 const calculatorButtons = document.querySelectorAll('button');
 
@@ -19,18 +22,18 @@ calculatorButtons.forEach(button => {
           try {
             // Replace percentage symbol (%) with '/100' before evaluation
             inputString = inputString.replace(/%/g, '/100');
-            
-            // Evaluate the user input as a mathematical expression
-            const result = eval(inputString);
+
+            // Evaluate the user input as a mathematical expression using eval
+            const result = new Function(`return ${inputString}`)();
 
             // Display the result in the input field
-            document.querySelector('input').value = result;
+            inputField.value = result;
 
             // Update the inputString with the result for further calculations
             inputString = result.toString();
           } catch (error) {
             // Handle invalid expressions
-            document.querySelector('input').value = 'Error';
+            inputField.value = 'Error';
             inputString = '';
           }
         }
@@ -38,16 +41,16 @@ calculatorButtons.forEach(button => {
       case 'C':
         // Clear the inputString and reset the input field
         inputString = '';
-        document.querySelector('input').value = inputString;
+        inputField.value = inputString;
         break;
       case 'M+':
         // Add the current input value to the memory value
-        memoryValue += parseFloat(inputString) ?? 0;
+        memoryValue += parseFloat(inputString) || 0;
         inputString = '';
         break;
       case 'M-':
         // Subtract the current input value from the memory value
-        memoryValue -= parseFloat(inputString) ?? 0;
+        memoryValue -= parseFloat(inputString) || 0;
         inputString = '';
         break;
       default:
@@ -60,7 +63,7 @@ calculatorButtons.forEach(button => {
         }
 
         // Display the updated input string in the input field
-        document.querySelector('input').value = inputString;
+        inputField.value = inputString;
         break;
     }
   });
