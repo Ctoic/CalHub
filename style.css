@@ -18,11 +18,79 @@ html, body {
   
 }
 
-/* .row{
-  margin: 0px 0px;
-  
-  
-} */
+.title {
+  background: linear-gradient(75deg, #00e1ff88, #6f00ff73 48%, #ff686871);
+  border-radius: 10px;
+  padding: 5px 28px;
+  font-size: 25px;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.444);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+h1 {
+  background-color: #00e0ff;
+  background-image: linear-gradient(75deg, #00e0ff, #7000ff 48%, #ff6868);
+  border: 0.5 thin black;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+
+.title {
+  text-transform: uppercase;
+  background-image: linear-gradient(75deg, #00e0ff, #7000ff 48%, #ff6868);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 300% center;
+}}
+
+body {
+  margin: 0px;
+  background-image: linear-gradient(75deg, #00e0ff, #7000ff 48%, #ff6868);
+  font-family: "Roboto", sans-serif;
+}
+
+.parent {
+  background-color: #8d2be8;
+  box-shadow: 0 10px 20px rgba(41,41,0.2);
+  border: 1px solid rgb(255, 255, 255);
+  border-width: 2px;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 1rem;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+
 .row input{
   width: 270px;
   font-size: 20px;
