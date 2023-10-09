@@ -45,12 +45,12 @@ calculatorButtons.forEach(button => {
         break;
       case 'M+':
         // Add the current input value to the memory value
-        memoryValue += parseFloat(inputString) || 0;
+        memoryValue += parseFloat(inputString) ?? 0;
         inputString = '';
         break;
       case 'M-':
         // Subtract the current input value from the memory value
-        memoryValue -= parseFloat(inputString) || 0;
+        memoryValue -= parseFloat(inputString) ?? 0;
         inputString = '';
         break;
       default:
