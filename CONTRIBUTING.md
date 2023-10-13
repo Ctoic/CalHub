@@ -1,0 +1,6 @@
+- Fork the Repository
+- Make a seprate branch
+- Commit changes
+- Now Pull Request
+- Wait for final approval to merge the branch into the main
+- 
