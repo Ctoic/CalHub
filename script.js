@@ -24,7 +24,7 @@ calculatorButtons.forEach(button => {
             inputString = inputString.replace(/%/g, '/100')
 
             // Evaluate the user input as a mathematical expression using eval
-            const result = new Function(`return ${inputString}`)()
+            const result = eval(inputString)
 
             // Display the result in the input field
             inputField.value = result
@@ -33,6 +33,7 @@ calculatorButtons.forEach(button => {
             inputString = result.toString()
           } catch (error) {
             // Handle invalid expressions
+            navigator.vibrate(200)
             inputField.value = 'Error'
             inputString = ''
           }
