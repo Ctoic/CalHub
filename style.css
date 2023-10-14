@@ -88,6 +88,11 @@ button:hover {
   background: orangered;
   font-weight: 900;
 }
+.eql:hover {
+  color: orangered; /*On Hover Change background color to white and foreground color to orangered (Only for Equals sign) looks better rather than primary color*/
+  background: white;
+  font-weight: 900;
+}
 
 .button:active {
   background: #000;
