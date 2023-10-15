@@ -3,7 +3,7 @@ html,
 body {
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: #7737f9;
+  background-color: #635013;
   min-width: 200px;
 }
 
@@ -95,19 +95,19 @@ button:hover {
 }
 
 .title {
-  background: linear-gradient(75deg, #00e1ff88, #6f00ff73 48%, #ff686871);
+  background: linear-gradient(75deg, #30707988, #6f00ff73 48%, #ff686871);
   border-radius: 10px;
   padding: 5px 28px;
   font-size: 40px;
   margin-top: 10vh;
   margin-bottom: 2vh;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.444);
-  border-top: 1px solid #2d2a37;
-  border-bottom: 1px solid #2d2a37;
+  border-top: 2px solid #2d2a37;
+  border-bottom: 2px solid #2d2a37;
 }
 
 h1 {
-  background-color: #00e0ff;
+  background-color: #085d68;
   background-image: linear-gradient(75deg, #7f45e2, #7000ff 48%, #2d2a37);
   border: 0.5 thin black;
   background-repeat: no-repeat;
@@ -119,12 +119,11 @@ h1 {
 
 .title {
   text-transform: uppercase;
-  background-image: linear-gradient(75deg, #2d2a37, #38c1bc 48%, #25c56d);
+  background-image: linear-gradient(75deg, #2d2a37, #21807c 48%, #46036d);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -139,12 +138,12 @@ h1 {
 
 body {
   margin: 0px;
-  background: linear-gradient(180deg, #807ece 0%, #8e7ece 100%);
+  background: linear-gradient(180deg, #2b295a 0%, #9c89e9 100%);
   font-family: "Roboto", sans-serif;
 }
 
 .parent {
-  background-color: #8d2be8;
+  background-color: #2c0d49;
   box-shadow: 0 10px 20px rgba(41, 41, 0.2);
   border-width: 2px;
   padding: 2rem;
@@ -172,7 +171,7 @@ body {
 @media (max-width: 400px) {
   html,
   body {
-    background-color: #e97222;
+    background-color: #813503;
     min-width: 200px;
   }
   .row input {
