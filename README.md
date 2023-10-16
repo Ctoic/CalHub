@@ -22,7 +22,7 @@ You can also use the "C" button to clear the input fields or the "DEL" button to
 
 ## Credits
 
-This project was built by Najam ALi Abasss as part of a Introduction to Web Dev course statrted By Blockchain Society. Special thanks to Blockchain Society .
+This project was built by Najam ALi Abasss as part of a Introduction to Web Dev course started By Blockchain Society. Special thanks to Blockchain Society .
 
 ## License
 
