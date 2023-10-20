@@ -10,6 +10,23 @@ const inputField = document.querySelector('input')
 // Select all the calculator buttons on the page
 const calculatorButtons = document.querySelectorAll('button')
 
+// Select the body element
+const bodyElement = document.body
+
+const parentBox = document.querySelector('.parent')
+
+// Function to change the background color
+function changeBackgroundColor(bgColor) {
+  bodyElement.style.background = 'linear-gradient(170deg, #2b295a 0%, #5541a5 100%)'
+  parentBox.classList.add('box-highlight')
+
+  // Reset to the original background-color
+  setTimeout(() => {
+    bodyElement.style.background = 'linear-gradient(180deg, #2b295a 0%, #9c89e9 100%)'
+    parentBox.classList.remove('box-highlight')
+  }, 200)
+}
+
 // Add an event listener to each button
 calculatorButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -31,6 +48,9 @@ calculatorButtons.forEach(button => {
 
             // Update the inputString with the result for further calculations
             inputString = result.toString()
+
+            // Change the background color here
+            changeBackgroundColor()
           } catch (error) {
             // Handle invalid expressions
             navigator.vibrate(200)
