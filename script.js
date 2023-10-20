@@ -15,14 +15,40 @@ const bodyElement = document.body
 
 const parentBox = document.querySelector('.parent')
 
+function generateRandomGradient() {
+  // Generate random colors
+  const color1 = getRandomColor();
+  const color2 = getRandomColor();
+
+  // Generate a random angle between 0 and 360 degrees
+  const angle = Math.floor(Math.random() * 360);
+
+  // Create the linear gradient string
+  const gradient = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+
+  // return generated linear gradient
+  return gradient;
+}
+
+function getRandomColor() {
+  // Generate a random hexadecimal color code
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  color += '80'; // so that background is never a solid boring one color and a gradient always
+  return color;
+}
+
+
 // Function to change the background color
-function changeBackgroundColor(bgColor) {
-  bodyElement.style.background = 'linear-gradient(170deg, #2b295a 0%, #5541a5 100%)'
+function changeBackgroundColor() {
+  bodyElement.style.background = generateRandomGradient()
   parentBox.classList.add('box-highlight')
 
-  // Reset to the original background-color
+  // to add a button press effect to parent container 
   setTimeout(() => {
-    bodyElement.style.background = 'linear-gradient(180deg, #2b295a 0%, #9c89e9 100%)'
     parentBox.classList.remove('box-highlight')
   }, 200)
 }
