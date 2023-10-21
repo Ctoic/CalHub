@@ -1,3 +1,18 @@
+// var screen = document.querySelector('input');
+// var btn = document.querySelectorAll('.btn');
+
+
+// // for getting the value of btn , here we use for loops 
+
+// for(button of btn){
+//   button.addEventListener('click',(e)=>{
+//     btntext = e.target.innerText;
+    
+//     screen.value+=btntext;
+
+//   });
+// }
+
 // Initialize an empty string to store the user input
 let inputString = ''
 
@@ -99,6 +114,66 @@ calculatorButtons.forEach(button => {
         memoryValue -= parseFloat(inputString) ?? 0
         inputString = ''
         break
+
+      case 'sin':
+        result = Math.sin(inputField.value);
+        inputString = result.toString()
+        break
+      
+      case 'cos':
+        result = Math.cos(inputField.value);
+        inputString = result.toString()
+        break
+      case 'tan':
+        result = Math.tan(inputField.value);
+        inputString = result.toString()
+        break
+      case '^':
+        var i , num ,f ;
+        f = 1 
+        num = inputField.value
+        for(i = 1; i<=2 ; i++){
+          f*=num;
+        }
+        result = f;
+        inputString = result.toString()
+        break
+      case '√ ':
+        result = Math.sqrt(inputField.value,2);
+        inputString = result.toString()
+        break
+
+      case 'log':
+        result = Math.log(inputField.value);
+        inputString = result.toString()
+        break
+
+      case 'π':
+        result = 3.14159265359;
+        inputString = result.toString()
+        break
+
+      case 'e':
+        result = 2.71828182846;
+        inputString = result.toString()
+        break
+
+      case 'X!':
+        var i, num , f;
+        f=1
+        num = inputField.value;
+        for(i=1; i<=num; i++){
+          f=f*i;
+        }
+        result=f;
+        inputString = result.toString()
+        break
+      case 'CE':
+        // inputString = inputField.value.toString();
+        inputField.value= inputField.value.substr(0,inputField.value.length-1);
+        inputString = inputField.value.toString()
+        break
+
       default:
         // Append the clicked button's value to the input string
         if (buttonValue === '%') {
@@ -114,3 +189,5 @@ calculatorButtons.forEach(button => {
     }
   })
 })
+
+
