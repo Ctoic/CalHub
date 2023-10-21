@@ -15,39 +15,38 @@ const bodyElement = document.body
 
 const parentBox = document.querySelector('.parent')
 
-function generateRandomGradient() {
+function generateRandomGradient () {
   // Generate random colors
-  const color1 = getRandomColor();
-  const color2 = getRandomColor();
+  const color1 = getRandomColor()
+  const color2 = getRandomColor()
 
   // Generate a random angle between 0 and 360 degrees
-  const angle = Math.floor(Math.random() * 360);
+  const angle = Math.floor(Math.random() * 360)
 
   // Create the linear gradient string
-  const gradient = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+  const gradient = `linear-gradient(${angle}deg, ${color1}, ${color2})`
 
   // return generated linear gradient
-  return gradient;
+  return gradient
 }
 
-function getRandomColor() {
+function getRandomColor () {
   // Generate a random hexadecimal color code
-  const letters = '0123456789ABCDEF';
-  let color = '#';
+  const letters = '0123456789ABCDEF'
+  let color = '#'
   for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+    color += letters[Math.floor(Math.random() * 16)]
   }
-  color += '80'; // so that background is never a solid boring one color and a gradient always
-  return color;
+  color += '80' // so that background is never a solid boring one color and a gradient always
+  return color
 }
-
 
 // Function to change the background color
-function changeBackgroundColor() {
+function changeBackgroundColor () {
   bodyElement.style.background = generateRandomGradient()
   parentBox.classList.add('box-highlight')
 
-  // to add a button press effect to parent container 
+  // to add a button press effect to parent container
   setTimeout(() => {
     parentBox.classList.remove('box-highlight')
   }, 200)
