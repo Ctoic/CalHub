@@ -171,12 +171,12 @@ calculatorButtons.forEach(button => {
 
       case 'X!': {
         let x = 1
-        let res = 1
+        let f1 = 1
         const num = inputField.value
         for (x = 1; x <= num; x++) {
-          res = res * x
+          f1 = f1 * x
         }
-        inputField.value = res
+        inputField.value = f1
         inputString = inputField.value.toString()
         break
       }
