@@ -130,7 +130,7 @@ calculatorButtons.forEach(button => {
         break
       case '^':
         var i,f,num;
-         f = 1; 
+        f = 1
         num = inputField.value
         for(i = 1; i<=2 ; i++){
           f*=num;
