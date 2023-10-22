@@ -116,17 +116,17 @@ calculatorButtons.forEach(button => {
         break
 
       case 'sin':
-        result = Math.sin(inputField.value);
-        inputString = result.toString()
+        inputField.value = Math.sin(inputField.value);
+        inputString = inputField.value.toString()
         break
       
       case 'cos':
-        result = Math.cos(inputField.value);
-        inputString = result.toString()
+        rinputField.value= Math.cos(inputField.value);
+        inputString = inputField.value.toString()
         break
       case 'tan':
-        result = Math.tan(inputField.value);
-        inputString = result.toString()
+        inputField.value = Math.tan(inputField.value);
+        inputString = inputField.value.toString()
         break
       case '^':
         var i , num ,f ;
@@ -135,38 +135,38 @@ calculatorButtons.forEach(button => {
         for(i = 1; i<=2 ; i++){
           f*=num;
         }
-        result = f;
-        inputString = result.toString()
+        inputField.value = f;
+        inputString = inputField.value.toString()
         break
       case '√ ':
-        result = Math.sqrt(inputField.value,2);
-        inputString = result.toString()
+        inputField.value = Math.sqrt(inputField.value,2);
+        inputString = inputField.value.toString()
         break
 
       case 'log':
-        result = Math.log(inputField.value);
-        inputString = result.toString()
+        inputField.value = Math.log(inputField.value);
+        inputString = inputField.value.toString()
         break
 
       case 'π':
-        result = 3.14159265359;
-        inputString = result.toString()
+        inputField.value = 3.14159265359;
+        inputString = inputField.value.toString()
         break
 
       case 'e':
-        result = 2.71828182846;
-        inputString = result.toString()
+        inputField.value = 2.71828182846;
+        inputString = inputField.value.toString()
         break
 
       case 'X!':
-        var i, num , f;
-        f=1
-        num = inputField.value;
+        const i =1;
+        const f=1
+        const num = inputField.value;
         for(i=1; i<=num; i++){
           f=f*i;
         }
-        result=f;
-        inputString = result.toString()
+        inputField.value=f;
+        inputString = inputField.value.toString()
         break
       case 'CE':
         // inputString = inputField.value.toString();
