@@ -139,7 +139,7 @@ calculatorButtons.forEach(button => {
         let f1 = 1
         const num1 = inputField.value
         for(i = 1; i<=2 ; i++){
-          f1*=num1;
+          f1*=num1
         }
         inputField.value = f1;
         inputString = inputField.value.toString()
@@ -158,13 +158,13 @@ calculatorButtons.forEach(button => {
       }
 
       case 'π':{
-        inputField.value = 3.14159265359;
+        inputField.value = 3.14159265359
         inputString = inputField.value.toString()
         break
       }
 
       case 'e':{
-        inputField.value = 2.71828182846;
+        inputField.value = 2.71828182846
         inputString = inputField.value.toString()
         break
       }
@@ -174,7 +174,7 @@ calculatorButtons.forEach(button => {
         let res=1
         const num = inputField.value;
         for(x=1; x<=num; x++){
-          res=res*x;
+          res = res*x
         }
         inputField.value=res;
         inputString = inputField.value.toString()
@@ -182,7 +182,7 @@ calculatorButtons.forEach(button => {
       }
       case 'CE':{
         // inputString = inputField.value.toString();
-        inputField.value= inputField.value.substr(0,inputField.value.length - 1)
+        inputField.value= inputField.value.substr(0, inputField.value.length - 1)
         inputString = inputField.value.toString()
         break
       }
