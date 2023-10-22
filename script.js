@@ -131,7 +131,7 @@ calculatorButtons.forEach(button => {
       case '^':
         let i =1;
         let f1 = 1
-        let num1 = inputField.value
+        const num1 = inputField.value
         for(i = 1; i<=2 ; i++){
           f1*=num1;
         }
@@ -161,7 +161,7 @@ calculatorButtons.forEach(button => {
       case 'X!':
         let x =1;
         let f=1
-        let num = inputField.value;
+        const num = inputField.value;
         for(x=1; x<=num; x++){
           f=f*x;
         }
