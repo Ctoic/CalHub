@@ -175,6 +175,31 @@ body {
   height: 100vh;
 }
 
+.footer{
+  padding: 10px;
+  font-size: large;
+  margin-top: 10px;
+  color: #000000;
+  background-color: #c2bdbd;
+  text-align: center;
+}
+
+#link{
+  font-weight: bold;
+  font-size: large;
+  color: #000000;
+  text-decoration: none;
+}
+
+.social{
+  padding: 10px;
+  height:40px;
+  width:40px;
+  color:#ffffff
+  /* font-size: large; */
+} 
+
+
 @media (max-width: 400px) {
   html,
   body {
