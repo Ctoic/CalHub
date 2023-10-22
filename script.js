@@ -123,6 +123,7 @@ calculatorButtons.forEach(button => {
         inputString = inputField.value.toString()
         break
       }
+      
       case 'cos':{
         inputField.value = Math.cos(inputField.value)
         inputString = inputField.value.toString()
