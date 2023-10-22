@@ -130,7 +130,7 @@ calculatorButtons.forEach(button => {
         break
       }
       case 'tan':{
-        inputField.value = Math.tan(inputField.value);
+        inputField.value = Math.tan(inputField.value)
         inputString = inputField.value.toString()
         break
       }
@@ -146,13 +146,13 @@ calculatorButtons.forEach(button => {
         break
       }
       case '√ ':{
-        inputField.value = Math.sqrt(inputField.value,2);
+        inputField.value = Math.sqrt(inputField.value,2)
         inputString = inputField.value.toString()
         break
       }
 
       case 'log':{
-        inputField.value = Math.log(inputField.value);
+        inputField.value = Math.log(inputField.value)
         inputString = inputField.value.toString()
         break
       }
@@ -182,7 +182,7 @@ calculatorButtons.forEach(button => {
       }
       case 'CE':{
         // inputString = inputField.value.toString();
-        inputField.value= inputField.value.substr(0,inputField.value.length-1);
+        inputField.value= inputField.value.substr(0,inputField.value.length-1)
         inputString = inputField.value.toString()
         break
       }
