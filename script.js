@@ -1,13 +1,12 @@
 // var screen = document.querySelector('input');
 // var btn = document.querySelectorAll('.btn');
 
-
-// // for getting the value of btn , here we use for loops 
+// // for getting the value of btn , here we use for loops
 
 // for(button of btn){
 //   button.addEventListener('click',(e)=>{
 //     btntext = e.target.innerText;
-    
+
 //     screen.value+=btntext;
 
 //   });
@@ -119,65 +118,63 @@ calculatorButtons.forEach(button => {
       }
 
       case 'sin':{
-        inputField.value = Math.sin(inputField.value);
+        inputField.value = Math.sin(inputField.value)
         inputString = inputField.value.toString()
         break
-      }
       
-      case 'cos':{
-        inputField.value = Math.cos(inputField.value);
-        inputString = inputField.value.toString()
+      case 'cos':
+        result = Math.cos(inputField.value);
+        inputString = result.toString()
         break
       }
       case 'tan':{
-        inputField.value = Math.tan(inputField.value);
+        inputField.value = Math.tan(inputField.value)
         inputString = inputField.value.toString()
         break
-      }
-      case '^':{
-        let i =1;
-        let f1 = 1
-        const num1 = inputField.value
+      case '^':
+        var i , num ,f ;
+        f = 1 
+        num = inputField.value
         for(i = 1; i<=2 ; i++){
-          f1*=num1;
+          f*=num;
         }
-        inputField.value = f1;
-        inputString = inputField.value.toString()
+        result = f;
+        inputString = result.toString()
         break
       }
       case '√ ':{
-        inputField.value = Math.sqrt(inputField.value,2);
+        inputField.value = Math.sqrt(inputField.value, 2)
         inputString = inputField.value.toString()
         break
       }
 
       case 'log':{
-        inputField.value = Math.log(inputField.value);
+        inputField.value = Math.log(inputField.value)
         inputString = inputField.value.toString()
         break
       }
 
       case 'π':{
-        inputField.value = 3.14159265359;
+        inputField.value = 3.14159265359
         inputString = inputField.value.toString()
         break
       }
 
       case 'e':{
-        inputField.value = 2.71828182846;
+        inputField.value = 2.71828182846
         inputString = inputField.value.toString()
         break
       }
 
-      case 'X!':{
-        let x =1;
-        let res=1
-        const num = inputField.value;
-        for(x=1; x<=num; x++){
-          res=res*x;
+      case 'X!':
+        var i, num , f;
+        f=1
+        num = inputField.value;
+        for(i=1; i<=num; i++){
+          f=f*i;
         }
-        inputField.value=res;
-        inputString = inputField.value.toString()
+        result=f;
+        inputString = result.toString()
         break
       }
       case 'CE':{
@@ -203,5 +200,3 @@ calculatorButtons.forEach(button => {
     }
   })
 })
-
-
