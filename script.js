@@ -1,3 +1,18 @@
+// var screen = document.querySelector('input');
+// var btn = document.querySelectorAll('.btn');
+
+
+// // for getting the value of btn , here we use for loops 
+
+// for(button of btn){
+//   button.addEventListener('click',(e)=>{
+//     btntext = e.target.innerText;
+    
+//     screen.value+=btntext;
+
+//   });
+// }
+
 // Initialize an empty string to store the user input
 let inputString = ''
 
@@ -84,22 +99,95 @@ calculatorButtons.forEach(button => {
           }
         }
         break
-      case 'C':
+      case 'C':{
         // Clear the inputString and reset the input field
         inputString = ''
         inputField.value = inputString
         break
-      case 'M+':
+      }
+      case 'M+':{
         // Add the current input value to the memory value
         memoryValue += parseFloat(inputString) ?? 0
         inputString = ''
         break
-      case 'M-':
+      }
+      case 'M-':{
         // Subtract the current input value from the memory value
         memoryValue -= parseFloat(inputString) ?? 0
         inputString = ''
         break
-      default:
+      }
+
+      case 'sin':{
+        inputField.value = Math.sin(inputField.value);
+        inputString = inputField.value.toString()
+        break
+      }
+      
+      case 'cos':{
+        inputField.value = Math.cos(inputField.value);
+        inputString = inputField.value.toString()
+        break
+      }
+      case 'tan':{
+        inputField.value = Math.tan(inputField.value);
+        inputString = inputField.value.toString()
+        break
+      }
+      case '^':{
+        let i =1;
+        let f1 = 1
+        const num1 = inputField.value
+        for(i = 1; i<=2 ; i++){
+          f1*=num1;
+        }
+        inputField.value = f1;
+        inputString = inputField.value.toString()
+        break
+      }
+      case '√ ':{
+        inputField.value = Math.sqrt(inputField.value,2);
+        inputString = inputField.value.toString()
+        break
+      }
+
+      case 'log':{
+        inputField.value = Math.log(inputField.value);
+        inputString = inputField.value.toString()
+        break
+      }
+
+      case 'π':{
+        inputField.value = 3.14159265359;
+        inputString = inputField.value.toString()
+        break
+      }
+
+      case 'e':{
+        inputField.value = 2.71828182846;
+        inputString = inputField.value.toString()
+        break
+      }
+
+      case 'X!':{
+        let x =1;
+        let res=1
+        const num = inputField.value;
+        for(x=1; x<=num; x++){
+          res=res*x;
+        }
+        inputField.value=res;
+        inputString = inputField.value.toString()
+        break
+      }
+      case 'CE':{
+        // inputString = inputField.value.toString();
+        inputField.value= inputField.value.substr(0,inputField.value.length-1);
+        inputString = inputField.value.toString()
+        break
+      }
+
+      default:{
         // Append the clicked button's value to the input string
         if (buttonValue === '%') {
           // If it's a percentage, divide the current input value by 100
@@ -111,6 +199,9 @@ calculatorButtons.forEach(button => {
         // Display the updated input string in the input field
         inputField.value = inputString
         break
+      }
     }
   })
 })
+
+

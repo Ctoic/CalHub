@@ -14,39 +14,51 @@
   <div class="container flex flex-col items-center mx-auto m-w-20">
     <h1 class="title">Calculator For You</h1>
     <div class="parent">
-    <div class="row display">
-      <input class="input" id="display" type="text" />
-    </div>
-    <div class="row">
-      <button type="button" class="opr">C</button>
-      <button type="button" class="opr">%</button>
-      <button type="button" class="opr">M+</button>
-      <button type="button" class="opr">M-</button>
-    </div>
-    <div class="row">
-      <button type="button">7</button>
-      <button type="button">8</button>
-      <button type="button">9</button>
-      <button type="button" class="opr">*</button>
-    </div>
-    <div class="row">
-      <button type="button">4</button>
-      <button type="button">5</button>
-      <button type="button">6</button>
-      <button type="button"class="opr">/</button>
-    </div>
-    <div class="row">
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button" class="opr">+</button>
-    </div>
-    <div class="row">
-      <button type="button">0</button>
-      <button type="button" class="  "">.</button>
-      <button type="button" class="eql">=</button>
-      <button type="button" class="opr">-</button>
-    </div>
+      <div class="row display">
+        <input class="input" id="screen" name="result" type="text" placeholder="0">
+      </div>
+      <div class="row">
+        <button id="ce" onclick="backspace()" class="opr" type="button">CE</button>
+        <button onclick="fact()" class="opr" type="button">X!</button>
+        <button type="button" class="opr" class="btn">(</button>
+        <button type="button" class="opr" class="btn">)</button>
+        <button type="button" class="opr">C</button>
+        <button type="button" class="opr" class="btn">%</button>
+        <button type="button" class="opr" class="btn">M+</button>
+        <button type="button" class="opr" class="btn">M-</button>
+      </div>
+      <div class="row">
+        <button onclick="sin()" class="opr" type="button">sin</button>
+        <button onclick="pi()" class="opr" type="button">π</button>
+        <button type="button" class="btn">7</button>
+        <button type="button" class="btn">8</button>
+        <button type="button" class="btn">9</button>
+        <button type="button" class="opr" class="btn">*</button>
+      </div>
+      <div class="row">
+        <button onclick="cos()" class="opr" type="button">cos</button>
+        <button onclick="log()" class="opr" type="button">log</button>
+        <button type="button" class="btn">4</button>
+        <button type="button" class="btn">5</button>
+        <button type="button" class="btn">6</button>
+        <button type="button" class="opr" class="btn">/</button>
+      </div>
+      <div class="row">
+        <button onclick="tan()" class="opr" type="button">tan</button>
+        <button onclick="sqrt()" class="opr" type="button">√ </button>
+        <button type="button" class="btn">1</button>
+        <button type="button" class="btn">2</button>
+        <button type="button" class="btn">3</button>
+        <button type="button" class="opr" class="btn">+</button>
+      </div>
+      <div class="row">
+        <button onclick="e()" class="opr" type="button">e</button>
+        <button onclick="pow()" class="opr" type="button">^</button>
+        <button type="button" class="btn">0</button>
+        <button type="button" class="  "" class=" btn">.</button>
+        <button type="button" class="eql" onclick="screen.value=eval(screen.value)">=</button>
+        <button type="button" class="opr" class="btn">-</button>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
