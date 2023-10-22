@@ -73,7 +73,7 @@ calculatorButtons.forEach(button => {
     const buttonValue = button.textContent
 
     switch (buttonValue) {
-      case '=':{
+      case '=':
         // Check if the inputString is not empty and contains a valid expression
         if (inputString) {
           try {
@@ -99,7 +99,6 @@ calculatorButtons.forEach(button => {
           }
         }
         break
-      }
       case 'C':{
         // Clear the inputString and reset the input field
         inputString = ''
@@ -126,7 +125,7 @@ calculatorButtons.forEach(button => {
       }
       
       case 'cos':{
-        inputField.value= Math.cos(inputField.value);
+        inputField.value = Math.cos(inputField.value);
         inputString = inputField.value.toString()
         break
       }
@@ -136,13 +135,13 @@ calculatorButtons.forEach(button => {
         break
       }
       case '^':{
-        let x =1;
-        let f = 1 
-        const num = inputField.value
-        for(x = 1; x<=2 ; x++){
-          f*=num;
+        let i =1;
+        let f1 = 1
+        const num1 = inputField.value
+        for(i = 1; i<=2 ; i++){
+          f1*=num1;
         }
-        inputField.value = f;
+        inputField.value = f1;
         inputString = inputField.value.toString()
         break
       }
@@ -171,13 +170,13 @@ calculatorButtons.forEach(button => {
       }
 
       case 'X!':{
-        let i =1;
-        let f1=1
-        const num1 = inputField.value;
-        for(i=1; i<=num1; i++){
-          f1=f1*i;
+        let x =1;
+        let res=1
+        const num = inputField.value;
+        for(x=1; x<=num; x++){
+          res=res*x;
         }
-        inputField.value=f1;
+        inputField.value=res;
         inputString = inputField.value.toString()
         break
       }
