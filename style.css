@@ -218,3 +218,32 @@ body {
     border-radius: 3rem;
   }
 }
+
+/***footer***/
+.footer{
+  background-color:#F0F0F0;
+  text-align: center;
+  bottom: 0;
+  padding-bottom:0;
+  }
+  
+.container_footer{
+  justify-content:center;
+  padding-bottom:0;
+  bottom: 0;
+}
+.foot_heading{
+padding-top: 15px;
+color: #213555;
+font-family: "Roboto", sans-serif;
+}
+.social{
+  margin: 10px 10px;
+  height:40px;
+  width:40px;
+  color:#FFF;
+  /* font-size: large; */
+} 
+a :hover{
+color: black;
+}
