@@ -121,27 +121,25 @@ calculatorButtons.forEach(button => {
         inputField.value = Math.sin(inputField.value)
         inputString = inputField.value.toString()
         break
-      }
-
-      case 'cos':{
-        inputField.value = Math.cos(inputField.value)
-        inputString = inputField.value.toString()
+      
+      case 'cos':
+        result = Math.cos(inputField.value);
+        inputString = result.toString()
         break
       }
       case 'tan':{
         inputField.value = Math.tan(inputField.value)
         inputString = inputField.value.toString()
         break
-      }
-      case '^':{
-        let i = 1
-        let f1 = 1
-        const num1 = inputField.value
-        for (i = 1; i <= 2; i++) {
-          f1 *= num1
+      case '^':
+        var i , num ,f ;
+        f = 1 
+        num = inputField.value
+        for(i = 1; i<=2 ; i++){
+          f*=num;
         }
-        inputField.value = f1
-        inputString = inputField.value.toString()
+        result = f;
+        inputString = result.toString()
         break
       }
       case '√ ':{
@@ -168,20 +166,20 @@ calculatorButtons.forEach(button => {
         break
       }
 
-      case 'X!':{
-        let x = 1
-        let res = 1
-        const num = inputField.value
-        for (x = 1; x <= num; x++) {
-          res = res * x
+      case 'X!':
+        var i, num , f;
+        f=1
+        num = inputField.value;
+        for(i=1; i<=num; i++){
+          f=f*i;
         }
-        inputField.value = res
-        inputString = inputField.value.toString()
+        result=f;
+        inputString = result.toString()
         break
       }
       case 'CE':{
         // inputString = inputField.value.toString();
-        inputField.value = inputField.value.substr(0, inputField.value.length - 1)
+        inputField.value= inputField.value.substr(0,inputField.value.length-1);
         inputString = inputField.value.toString()
         break
       }
