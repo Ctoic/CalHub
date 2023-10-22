@@ -129,9 +129,9 @@ calculatorButtons.forEach(button => {
         inputString = inputField.value.toString()
         break
       case '^':
-        const i =1;
-        const f1 = 1
-        const num1 = inputField.value
+        let i =1;
+        let f1 = 1
+        let num1 = inputField.value
         for(i = 1; i<=2 ; i++){
           f1*=num1;
         }
@@ -159,9 +159,9 @@ calculatorButtons.forEach(button => {
         break
 
       case 'X!':
-        const x =1;
-        const f=1
-        const num = inputField.value;
+        let x =1;
+        let f=1
+        let num = inputField.value;
         for(x=1; x<=num; x++){
           f=f*x;
         }
