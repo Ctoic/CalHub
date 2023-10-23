@@ -239,18 +239,22 @@ body {
   padding-bottom: 0;
   bottom: 0;
 }
+
 .foot_heading {
   padding-top: 15px;
   color: #213555;
   font-family: "Roboto", sans-serif;
 }
+
 .social {
   margin: 10px 10px;
   height: 40px;
   width: 40px;
   color: #fff;
-  /* font-size: large; */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for transform and box-shadow */
 }
-a :hover {
-  color: black;
+
+.social:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a slight shadow on hover */
 }
