@@ -81,7 +81,7 @@ calculatorButtons.forEach((button) => {
           }
         }
         break;
-      case 'C':
+      case 'AC':
         // Clear the inputString and reset the input field
         inputString = '';
         inputField.value = inputString;

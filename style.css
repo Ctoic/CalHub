@@ -14,12 +14,11 @@ body {
 }
 
 .container {
-  /* margin-left: 1.8rem; */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .row {
@@ -43,7 +42,7 @@ input[type="text"] {
   font-size: 2rem;
   text-align: right;
   color: #ebebeb;
-  font-family: Rubik;
+  font-family: 'Orbitron', sans-serif;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
