@@ -37,7 +37,7 @@ body {
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 90%;
   height: 5px;
   padding: 20px;
   font-size: 2rem;
@@ -48,6 +48,8 @@ input[type="text"] {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   box-shadow: 0px 0px 4px grey;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 button {
@@ -121,7 +123,7 @@ button:hover {
   border-radius: 10px;
   padding: 5px 28px;
   font-size: 40px;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 2vh;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.444);
   border-top: 2px solid #2d2a37;
