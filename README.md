@@ -1,29 +1,44 @@
 # Calculator App
 
-This is a simple calculator app built using HTML, CSS, and JavaScript.
+**Table of Contents**
+- [Description](#description)
+- [Technologies Used](#technologies-used)
+- [Project Overview](#project-overview)
+- [How to Use the App](#how-to-use-the-app)
+- [Credits](#credits)
+- [License](#license)
 
-# Technologies Used
+## Description
+
+The Calculator App is a straightforward yet powerful web application crafted using a combination of HTML, CSS, and JavaScript to perform basic mathematical operations with ease.
+
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-# Project Overview
+## Project Overview
 
-The Calculator App is a web application that allows users to perform basic mathematical operations such as addition, subtraction, multiplication, and division. The app has a user-friendly interface that displays the results of the calculations in real-time.
+This web-based Calculator App empowers users to conduct fundamental arithmetic operations, including addition, subtraction, multiplication, and division. The application boasts a user-friendly interface that provides real-time calculation results.
 
-- [Calculator](https://hissabkittab.netlify.app)
+[Access the Calculator](https://hissabkittab.netlify.app)
 
-## How to Use the App
+### How to Use the App
 
-To use the calculator app, simply enter the first number, select an operation (+, -, *, /), and then enter the second number. Click the "=" button to perform the calculation and display the result.
+To make use of the Calculator App, follow these simple steps:
 
-You can also use the "C" button to clear the input fields or the "DEL" button to delete the last entered digit.
+1. Enter the first number into the designated input field.
+2. Select the desired operation (+, -, *, /).
+3. Input the second number.
+4. Click the "=" button to execute the calculation and instantly view the result.
+
+Additionally, you can employ the "C" button to clear the input fields or the "DEL" button to remove the last entered digit.
 
 ## Credits
 
-This project was built by Najam ALi Abasss as part of a Introduction to Web Dev course started By Blockchain Society. Special thanks to Blockchain Society .
+This project was thoughtfully created by Najam Ali Abbas as part of an Introduction to Web Development course initiated by Blockchain Society. Special thanks to the Blockchain Society for their support.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per your needs.
+This project is licensed under the [MIT License](LICENSE), providing the freedom to utilize and adapt the code to meet your specific requirements.
