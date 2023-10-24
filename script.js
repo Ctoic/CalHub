@@ -111,7 +111,7 @@ calculatorButtons.forEach((button) => {
       case '^':
         const num = parseFloat(inputField.value);
         const result = num * num;
-        inputString = result.toString();
+        //inputString = result.toString();
         break;
       case '√':
         inputField.value = Math.sqrt(parseFloat(inputField.value));
