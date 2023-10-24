@@ -3,6 +3,8 @@ let inputString = '';
 
 // Select the input field
 const inputField = document.querySelector('input');
+const resultDisplay = document.querySelector('#results');
+
 
 // Select all the calculator buttons on the page
 const calculatorButtons = document.querySelectorAll('button');
@@ -49,6 +51,47 @@ function changeBackgroundColor() {
   }, 200);
 }
 
+// Function to calculate and display the result
+function calculateResult() {
+  const inputValue = inputField.value;
+  try {
+    // Replace percentage symbol (%) with '/100' before evaluation
+    inputString = inputValue.replace(/%/g, '/100');
+
+    // Evaluate the user input as a mathematical expression using eval
+    const result = eval(inputString);
+
+    // Display the result in the second input field
+    resultDisplay.value = result;
+
+    // Change the background color here
+    changeBackgroundColor();
+  } catch (error) {
+    // Handle invalid expressions
+    navigator.vibrate(200);
+    inputField.value = 'Error';
+    inputString = '';
+    resultDisplay.value = ''; // Clear the dashboard on error
+  }
+}
+
+// Function to continuously update the result as the user types or presses buttons
+function updateResult() {
+  inputString = inputField.value;
+
+  try {
+    // Check if the inputString is not empty and contains a valid expression
+    if (inputString) {
+      const result = eval(inputString);
+      resultDisplay.value = result;
+    } else {
+      resultDisplay.value = ''; // Clear the dashboard if the input is empty
+    }
+  } catch (error) {
+    resultDisplay.value = ''; // Clear the dashboard on error
+  }
+}
+
 // Add an event listener to each button
 calculatorButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -58,34 +101,15 @@ calculatorButtons.forEach((button) => {
       case '=':
         // Check if the inputString is not empty and contains a valid expression
         if (inputString) {
-          try {
-            // Replace percentage symbol (%) with '/100' before evaluation
-            inputString = inputString.replace(/%/g, '/100');
-
-            // Evaluate the user input as a mathematical expression using eval
-            inputString = inputString.replace("^", "**");
-            const result = eval(inputString);
-
-            // Display the result in the input field
-            inputField.value = result;
-
-            // Update the inputString with the result for further calculations
-            inputString = result.toString();
-
-            // Change the background color here
-            changeBackgroundColor();
-          } catch (error) {
-            // Handle invalid expressions
-            navigator.vibrate(200);
-            inputField.value = 'Error';
-            inputString = '';
-          }
+          calculateResult();
         }
         break;
       case 'C':
         // Clear the inputString and reset the input field
         inputString = '';
         inputField.value = inputString;
+        // claer the Display field
+        resultDisplay.value = '';
         break;
       case 'M+':
         // Add the current input value to the memory value
@@ -110,11 +134,9 @@ calculatorButtons.forEach((button) => {
         inputString = inputField.value.toString();
         break;
       case '^':
-        //const num = parseFloat(inputField.value);
-        //const result = num * num;
+        const num = parseFloat(inputField.value);
+        const result = num * num;
         //inputString = result.toString();
-        inputString += buttonValue;
-        inputField.value = inputString;
         break;
       case '√':
         inputField.value = Math.sqrt(parseFloat(inputField.value));
@@ -144,18 +166,13 @@ calculatorButtons.forEach((button) => {
         inputField.value = inputField.value.slice(0, -1);
         inputString = inputField.value;
         break;
-      default:
-        // Append the clicked button's value to the input string
-        if (buttonValue === '%') {
-          // If it's a percentage, divide the current input value by 100
-          inputString = (parseFloat(inputField.value) / 100).toString();
-        } else {
+        default:
+          // Append the clicked button's value to the input field
           inputString += buttonValue;
-        }
-
-        // Display the updated input string in the input field
-        inputField.value = inputString;
-        break;
+          inputField.value = inputString;
+          updateResult(); // Update the result as you add operators
+          break;
     }
   });
 });
+inputField.addEventListener('input', updateResult);
