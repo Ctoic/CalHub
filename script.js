@@ -63,6 +63,7 @@ calculatorButtons.forEach((button) => {
             inputString = inputString.replace(/%/g, '/100');
 
             // Evaluate the user input as a mathematical expression using eval
+            inputString = inputString.replace("^", "**");
             const result = eval(inputString);
 
             // Display the result in the input field
@@ -109,9 +110,11 @@ calculatorButtons.forEach((button) => {
         inputString = inputField.value.toString();
         break;
       case '^':
-        const num = parseFloat(inputField.value);
-        const result = num * num;
+        //const num = parseFloat(inputField.value);
+        //const result = num * num;
         //inputString = result.toString();
+        inputString += buttonValue;
+        inputField.value = inputString;
         break;
       case '√':
         inputField.value = Math.sqrt(parseFloat(inputField.value));
