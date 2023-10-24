@@ -105,6 +105,15 @@ button:hover {
     0px 11px 7px 0px rgba(0, 0, 0, 0.01);
 }
 
+.btn:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #81eee5;
+}
+
 .opr {
   background: linear-gradient(
       180deg,
