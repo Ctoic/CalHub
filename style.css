@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
 }
 
-input[type="text"] {
+.input[type="text"] {
   width: 90%;
   height: 5px;
   padding: 20px;
@@ -49,6 +49,22 @@ input[type="text"] {
   border-radius: 8px;
   box-shadow: 0px 0px 4px grey;
   margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.results[type="text"] {
+  width: 90%;
+  height: 5px;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: right;
+  color: #ebebeb;
+  font-family: Rubik;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px rgb(5, 210, 132);
+  margin-top: 1vh;
   margin-bottom: 3vh;
 }
 
@@ -87,15 +103,6 @@ button:hover {
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
     0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
     0px 11px 7px 0px rgba(0, 0, 0, 0.01);
-}
-
-.btn:hover {
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
-    #81eee5;
 }
 
 .opr {
