@@ -10,14 +10,17 @@
   <link href="utils.css" rel="stylesheet" type="text/css" />
 </head>
 
+
 <body>
   <div class="container flex flex-col items-center mx-auto m-w-20">
-    <h1 class="title">HissabKittab</h1>
-    <h2>Calculator</h2>
+    <h1 class="title">Calculator For You</h1>
     <div class="parent"> 
       <div class="row display">
         <input class="input" id="screen" name="result" type="text" placeholder="0">
       </div>
+      <div class="row result">
+        <input class="results" id="results" name="results" type="text" placeholder="Answer">
+      </div>      
       <div class="row">
         <button id="ce" onclick="backspace()" class="opr" type="button">CE</button>
         <button onclick="fact()" class="opr" type="button">X!</button>
