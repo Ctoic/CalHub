@@ -147,7 +147,7 @@ calculatorButtons.forEach((button) => {
         inputString = inputField.value.toString();
         break;
       case 'π':
-        inputField.value = Math.PI;
+        inputField.value += Math.PI.toFixed(3);
         inputString = inputField.value.toString();
         break;
       case 'e':
