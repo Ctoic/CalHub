@@ -35,6 +35,12 @@ To make use of the Calculator App, follow these simple steps:
 
 Additionally, you can employ the "C" button to clear the input fields or the "DEL" button to remove the last entered digit.
 
+### CONTRIBUTORS
+
+<a href="https://github.com/Ctoic/Calculator-using-HTML-CSS-JS/blob/master/Contributors.md">
+  <img src="https://contributors-img.web.app/image?repo=Ctoic/Calculator-using-HTML-CSS-JS"/>
+</a>
+
 ## Credits
 
 This project was thoughtfully created by Najam Ali Abbas as part of an Introduction to Web Development course initiated by Blockchain Society. Special thanks to the Blockchain Society for their support.
