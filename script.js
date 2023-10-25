@@ -156,3 +156,12 @@ calculatorButtons.forEach((button) => {
     }
   });
 });
+
+let display=document.getElementById("screen");
+
+//Adding Evennt Listener when enter key is pressed
+window.addEventListener("keypress",function(event){
+  if (event.key === "Enter"){
+  display.value=eval(display.value);
+  }
+});
