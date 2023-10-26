@@ -255,10 +255,14 @@ body {
 
 /***footer***/
 .footer {
-  background-color: #f0f0f0;
+  height: 160px;
+  background-color: #2d2a37;
   text-align: center;
   bottom: 0;
   padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container_footer {
@@ -268,21 +272,37 @@ body {
 }
 
 .foot_heading {
-  padding-top: 15px;
-  color: #213555;
+  /* padding-top: 15px; */
+  margin-bottom: 2rem;
+  color: #fff;
   font-family: "Roboto", sans-serif;
 }
-
-
-.social {
-  margin: 10px 10px;
-  height: 40px;
-  width: 40px;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for transform and box-shadow */
+.footer-links{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  width: 282px;
+  margin: auto;
 }
-
-.social:hover {
+.icons{
+  font-size: 1.5rem;
+  color: #fff;
+  margin: auto;
+}
+.icons i{
+  margin-top: 0.65rem;
+}
+.footer-icons{
+  height: 45px;
+  width: 45px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+}
+.footer-icons:hover{
   transform: scale(1.1); /* Increase the size on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a slight shadow on hover */
+  cursor: pointer;
 }
+
