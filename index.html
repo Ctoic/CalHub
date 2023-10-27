@@ -61,13 +61,26 @@
         <button onclick="pow()" class="opr" type="button">^</button>
         <button type="button" class="btn">0</button>
         <button type="button" class="btn">.</button>
-        <button type="button" class="eql" onclick="screen.value=eval(screen.value)">=</button>
+        <button type="button" class="eql" id="equalBtn" onclick="screen.value=eval(screen.value)">=</button>
         <button type="button" class="opr" class="btn">-</button>
       </div>
 
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
+
+  <script>
+    //Equal operation is performed on pressing Enter
+    var input=document.getElementById("screen");
+    
+    input.addEventListener("keypress",function(event){
+      if (event.key === "Enter"){
+      event.preventDefault();
+      input.value=eval(input.value);
+      }
+    });
+  </script>
 </body>
 
 <footer class="footer">
