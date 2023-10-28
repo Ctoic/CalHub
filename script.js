@@ -4,6 +4,7 @@ let inputString = '';
 // Select the input field
 const inputField = document.querySelector('input');
 const resultDisplay = document.querySelector('#results');
+const operators = ['+','-','*','/'];
 
 
 // Select all the calculator buttons on the page
@@ -57,21 +58,27 @@ function calculateResult() {
   try {
     // Replace percentage symbol (%) with '/100' before evaluation
     inputString = inputValue.replace(/%/g, '/100');
-
+    // Replace √(first digit group) with 'Math.sqrt()' function for that digit group before evaluation
+    inputString = inputValue.replace(/√([+-]*\d+)/g, 'Math.sqrt($1)');
+    
+    
     // Evaluate the user input as a mathematical expression using eval
     const result = eval(inputString);
-
+    
     // Display the result in the second input field
     resultDisplay.value = result;
+    
+    // Revert back the Math.sqrt() function
+    inputString = inputValue.replace(/Math.sqrt\((\d+)\)/g, '√$1');
 
     // Change the background color here
     changeBackgroundColor();
   } catch (error) {
     // Handle invalid expressions
     navigator.vibrate(200);
-    inputField.value = 'Error';
+    inputField.value = '';
     inputString = '';
-    resultDisplay.value = ''; // Clear the dashboard on error
+    resultDisplay.value = error.message; // Clear the dashboard on error
   }
 }
 
@@ -139,8 +146,15 @@ calculatorButtons.forEach((button) => {
         //inputString = result.toString();
         break;
       case '√':
-        inputField.value = Math.sqrt(parseFloat(inputField.value));
+        // inputField.value = Math.sqrt(parseFloat(inputField.value));
+
+        // Check if input field value is empty and if it is, not then √ should precede *
+        const inputFieldValueLength = inputField.value.length;
+        if(inputFieldValueLength != 0 && !operators.includes(inputField.value[inputFieldValueLength - 1]))
+          inputField.value += '*';
+        inputField.value += '√';
         inputString = inputField.value.toString();
+
         break;
       case 'log':
         inputField.value = Math.log(parseFloat(inputField.value));
@@ -166,12 +180,12 @@ calculatorButtons.forEach((button) => {
         inputField.value = inputField.value.slice(0, -1);
         inputString = inputField.value;
         break;
-        default:
-          // Append the clicked button's value to the input field
-          inputString += buttonValue;
-          inputField.value = inputString;
-          updateResult(); // Update the result as you add operators
-          break;
+      default:
+        // Append the clicked button's value to the input field
+        inputString += buttonValue;
+        inputField.value = inputString;
+        updateResult(); // Update the result as you add operators
+        break;
     }
   });
 });
