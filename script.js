@@ -99,6 +99,32 @@ function updateResult() {
   }
 }
 
+
+function appendConstant(constant) {
+  switch (constant) {
+      case 'G':
+          const G = 6.67430e-11;
+          inputString += G.toString();
+          break;
+      case 'h':
+          const h = 6.62607015e-34;
+          inputString += h.toString();
+          break;
+      case 'c':
+          const c = 299792458;
+          inputString += c.toString();
+          break;
+      default:
+          console.error(`Unknown constant: ${constant}`);
+          return;
+  }
+  inputField.value = inputString;
+  updateResult();
+}
+
+
+
+
 // Add an event listener to each button
 calculatorButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -180,6 +206,67 @@ calculatorButtons.forEach((button) => {
         inputField.value = inputField.value.slice(0, -1);
         inputString = inputField.value;
         break;
+
+
+
+        case 'asin':
+          const valueAsin = parseFloat(inputField.value);
+          if (valueAsin >= -1 && valueAsin <= 1) {
+              let resultInRadians = Math.asin(valueAsin);
+              let resultInDegrees = resultInRadians * (180 / Math.PI);
+              inputField.value = resultInDegrees.toString() + "°";
+              inputString = inputField.value;
+          } else {
+              inputField.value = "Error";
+              inputString = '';
+          }
+          break;
+  
+      case 'acos':
+          const valueAcos = parseFloat(inputField.value);
+          if (valueAcos >= -1 && valueAcos <= 1) {
+              let resultInRadians = Math.acos(valueAcos);
+              let resultInDegrees = resultInRadians * (180 / Math.PI);
+              inputField.value = resultInDegrees.toString() + "°";
+              inputString = inputField.value;
+          } else {
+              inputField.value = "Error";
+              inputString = '';
+          }
+          break;
+  
+      case 'atan':
+          const valueAtan = parseFloat(inputField.value);
+          let resultInRadiansAtan = Math.atan(valueAtan);
+          let resultInDegreesAtan = resultInRadiansAtan * (180 / Math.PI);
+          inputField.value = resultInDegreesAtan.toString() + "°";
+          inputString = inputField.value;
+          break;
+
+          case 'G (gravitational constant)':
+    const G = 6.67430e-11;
+    inputString += G.toString();
+    inputField.value = inputString;
+    updateResult();
+    break;
+
+case 'h (Planck constant)':
+    const h = 6.62607015e-34;
+    inputString += h.toString();
+    inputField.value = inputString;
+    updateResult();
+    break;
+
+case 'c (speed of light)':
+    const c = 299792458;
+    inputString += c.toString();
+    inputField.value = inputString;
+    updateResult();
+    break;
+
+
+
+
       default:
         // Append the clicked button's value to the input field
         inputString += buttonValue;

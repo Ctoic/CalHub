@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  margin-bottom: 100px;
 }
 
 .row {
@@ -255,7 +256,7 @@ body {
 
 /***footer***/
 .footer {
-  height: 160px;
+  height: 140px;
   background-color: #2d2a37;
   text-align: center;
   bottom: 0;
@@ -263,6 +264,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
+  clear: both;
 }
 
 .container_footer {
