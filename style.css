@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -80,11 +81,9 @@ button {
   font-weight: 400;
   letter-spacing: -0.48px;
   border-radius: 999px;
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.05) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
+      rgba(255, 255, 255, 0.05) 100%),
     #2d2a37;
   box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset,
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
@@ -93,11 +92,9 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.15) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
+      rgba(255, 255, 255, 0.05) 100%),
     #7f45e2;
   box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
@@ -106,20 +103,16 @@ button:hover {
 }
 
 .btn:hover {
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.15) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
+      rgba(255, 255, 255, 0.05) 100%),
     #81eee5;
 }
 
 .opr {
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.05) 0.01%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
+      rgba(255, 255, 255, 0.05) 100%),
     #462878;
   box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
@@ -132,8 +125,10 @@ button:hover {
   background: orangered;
   font-weight: 900;
 }
+
 .eql:hover {
-  color: orangered; /*On Hover Change background color to white and foreground color to orangered (Only for Equals sign) looks better rather than primary color*/
+  color: orangered;
+  /*On Hover Change background color to white and foreground color to orangered (Only for Equals sign) looks better rather than primary color*/
   background: white;
   font-weight: 900;
 }
@@ -214,7 +209,8 @@ body {
 }
 
 .parent.box-highlight {
-  transform: translateY(2px); /* Simulate a press-down effect */
+  transform: translateY(2px);
+  /* Simulate a press-down effect */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
@@ -223,6 +219,7 @@ body {
     font-size: 20px;
     border-radius: 5px;
   }
+
   button {
     font-size: 1.1rem;
     margin: 5px;
@@ -233,14 +230,17 @@ body {
   .title {
     font-size: 25px;
   }
+
   .head-container {
     width: 100%;
     margin-top: 0px;
   }
+
   .parent {
     width: 75%;
     margin-top: 100px;
   }
+
   .container {
     height: 100vh;
   }
@@ -258,6 +258,7 @@ body {
   height: 160px;
   background-color: #2d2a37;
   text-align: center;
+  margin-top: 12%;
   bottom: 0;
   padding-bottom: 0;
   display: flex;
@@ -277,22 +278,26 @@ body {
   color: #fff;
   font-family: "Roboto", sans-serif;
 }
-.footer-links{
+
+.footer-links {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   width: 282px;
   margin: auto;
 }
-.icons{
+
+.icons {
   font-size: 1.5rem;
   color: #fff;
   margin: auto;
 }
-.icons i{
+
+.icons i {
   margin-top: 0.65rem;
 }
-.footer-icons{
+
+.footer-icons {
   height: 45px;
   width: 45px;
   background-color: #000;
@@ -300,9 +305,32 @@ body {
   margin: auto;
   cursor: pointer;
 }
-.footer-icons:hover{
-  transform: scale(1.1); /* Increase the size on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a slight shadow on hover */
+
+.footer-icons:hover {
+  transform: scale(1.1);
+  /* Increase the size on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add a slight shadow on hover */
   cursor: pointer;
 }
 
+#timer {
+  height: 115px;
+  width: 372px;
+  padding-top: 100px;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(./images/hacktoberfest.png);
+  font-size: 1.7rem;
+  font-family: "Algerian", "Roboto", sans-serif;
+  border: 1px solid #000;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px black;
+}
+
+#timer-text {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+}
