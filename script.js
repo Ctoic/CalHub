@@ -216,6 +216,6 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer-text").innerHTML = "EXPIRED";
+    document.getElementById("timer-text").innerHTML = "ENDED";
   }
 }, 1000);
