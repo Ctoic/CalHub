@@ -139,7 +139,7 @@ calculatorButtons.forEach((button) => {
         break;
       case 'mod':
         const num1 = parseFloat(inputField.value);
-        const num2 = parseFloat(inputField.value);
+        const num2 = parseFloat(inputField2.value);
         inputField.value = num1 % num2;
         inputString = inputField.value.toString();
         break;
