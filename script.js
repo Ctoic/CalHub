@@ -137,6 +137,12 @@ calculatorButtons.forEach((button) => {
         }
         inputString = factorial.toString();
         break;
+      case 'mod':
+        const num1 = parseFloat(inputField.value);
+        const num2 = parseFloat(inputField.value);
+        inputField.value = num1 % num2;
+        inputString = inputField.value.toString();
+        break;
       case 'CE':
         inputField.value = inputField.value.slice(0, -1);
         inputString = inputField.value;
