@@ -43,7 +43,7 @@ Additionally, you can employ the "C" button to clear the input fields or the "DE
 
 ## Credits
 
-This project was thoughtfully created by Najam Ali Abbas as part of an Introduction to Web Development course initiated by Blockchain Society. Special thanks to the Blockchain Society for their support.
+This project was thoughtfully created by Najam Ali Abbas as part of an Introduction to Web Development course initiated by the Blockchain Society. Special thanks to the Brilliant HactoberFest Contributors. 
 
 ## License
 
