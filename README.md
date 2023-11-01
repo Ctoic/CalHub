@@ -29,9 +29,10 @@ This web-based Calculator App empowers users to conduct fundamental arithmetic o
 To make use of the Calculator App, follow these simple steps:
 
 1. Enter the first number into the designated input field or click one of the scientific operators beforehand to perform a scientific operation on a number.
-2. Select the desired operation (+, -, *, /). 
-3. Input the second number.
-4. Click the "=" button to execute the calculation and instantly view the result.
+2. Select the desired operation (+, -, *, /).
+3. Select Desired Scientific Operation (tan, cos, sin and many more ). 
+4. Input the second number.
+5. Click the "=" button to execute the calculation and instantly view the result.
 
 Additionally, you can employ the "C" button to clear the input fields or the "DEL" button to remove the last entered digit.
 
