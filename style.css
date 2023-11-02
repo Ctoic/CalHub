@@ -97,6 +97,7 @@ button {
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
     0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
     0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+  transition: all 0.2s ease;
 }
 
 button:hover {
@@ -108,6 +109,12 @@ button:hover {
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
     0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
     0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+  transform: scale(1.1);
+}
+
+button:active {
+  background: #000;
+  transform: translate(0px, 2px);
 }
 
 .btn:hover {
@@ -115,6 +122,12 @@ button:hover {
       rgba(0, 0, 0, 0.15) 0%,
       rgba(255, 255, 255, 0.05) 100%),
     #81eee5;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  background: #000;
+  transform: translate(0px, 2px);
 }
 
 .opr {
@@ -327,6 +340,7 @@ body {
   border-radius: 50%;
   margin: auto;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .footer-icons:hover {
@@ -335,6 +349,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   /* Add a slight shadow on hover */
   cursor: pointer;
+  background-color: rgb(66, 66, 66);
+  border-radius: 18px;
 }
 
 #timer {

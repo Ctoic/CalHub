@@ -52,6 +52,36 @@ function changeBackgroundColor() {
   }, 200);
 }
 
+function animateValueChange(element, end, duration) {
+  let startValue = parseFloat(element.value) || 0; // Start from the current value
+  let startOpacity = 0; // Start from opacity 0
+  let startTimestamp = null;
+
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+    const interpolatedOpacity = progress;
+
+    // Update the value and opacity (don't change anything other than alpha though, get the elements r, g, and b)
+    element.value = end;
+    // Get R G and B of the text
+    const rgb = window.getComputedStyle(element).color.match(/\d+/g);
+    const r = rgb[0];
+    const g = rgb[1];
+    const b = rgb[2];
+    element.style.color = `rgba(${r}, ${g}, ${b}, ${interpolatedOpacity})`;
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+
+  window.requestAnimationFrame(step);
+}
+
+
+
 // Function to calculate and display the result
 function calculateResult() {
   const inputValue = inputField.value;
@@ -66,7 +96,7 @@ function calculateResult() {
     const result = eval(inputString);
     
     // Display the result in the second input field
-    resultDisplay.value = result;
+    animateValueChange(resultDisplay, result, 500);
     
     // Revert back the Math.sqrt() function
     inputString = inputValue.replace(/Math.sqrt\((\d+)\)/g, '√$1');
@@ -90,7 +120,7 @@ function updateResult() {
     // Check if the inputString is not empty and contains a valid expression
     if (inputString) {
       const result = eval(inputString);
-      resultDisplay.value = result;
+      animateValueChange(resultDisplay, result, 500);
     } else {
       resultDisplay.value = ''; // Clear the dashboard if the input is empty
     }
