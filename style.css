@@ -235,7 +235,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .row input {
     font-size: 20px;
     border-radius: 5px;
@@ -264,6 +264,31 @@ body {
 
   .container {
     height: 100vh;
+  }
+  .container-calculator{
+    width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container-calculator{
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-calculator{
+    width:500px;
+  }
+}
+@media (max-width: 500px) {
+  .container-calculator{
+    width: 400px;
+  }
+}
+@media (max-width: 400px){
+  .container-calculator{
+    width: 375px;
   }
 }
 
