@@ -120,11 +120,6 @@ function updateResult() {
     // Check if the inputString is not empty and contains a valid expression
     if (inputString) {
       const result = eval(inputString);
-      //Check if the inputString contains only one number . if Yes , Display None and Return
-      if (inputString == result){
-        resultDisplay.value = '';
-        return;
-      }
       animateValueChange(resultDisplay, result, 500);
     } else {
       resultDisplay.value = ''; // Clear the dashboard if the input is empty
