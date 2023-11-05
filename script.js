@@ -193,6 +193,7 @@ calculatorButtons.forEach((button) => {
       case 'π':
         inputField.value += Math.PI.toFixed(3);
         inputString = inputField.value.toString();
+        updateResult();
         break;
       case 'e':
         inputField.value = Math.E;
