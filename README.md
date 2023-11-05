@@ -22,7 +22,10 @@ The Calculator App is a straightforward yet powerful web application crafted usi
 
 This web-based Calculator App empowers users to conduct fundamental arithmetic operations as well as many scientific operations, including addition, subtraction, multiplication, division, finding logarithms, trigonometrical operations, and factorial. The application boasts a user-friendly interface that provides real-time calculation results. 
 
-[Access the Calculator](https://hissabkittab.netlify.app)
+[Access the Calculator](https://calhub.netlify.app)
+
+<a href="https://example.com" style="padding: 10px 20px; background-color: #0074d9; color: #ffffff; text-decoration: none; border-radius: 3px;">Click Me</a>
+
 
 ### How to Use the App
 
