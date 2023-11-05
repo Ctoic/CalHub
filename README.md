@@ -24,8 +24,6 @@ This web-based Calculator App empowers users to conduct fundamental arithmetic o
 
 [Access the Calculator](https://calhub.netlify.app)
 
-<a href="https://example.com" style="padding: 10px 20px; background-color: #0074d9; color: #ffffff; text-decoration: none; border-radius: 3px;">Click Me</a>
-
 
 ### How to Use the App
 
