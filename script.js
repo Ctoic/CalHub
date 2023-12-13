@@ -129,6 +129,75 @@ function updateResult() {
   }
 }
 
+// Function to check if a character is an operator
+function isOperator(char) {
+  return ['+', '-', '*', '/', '%'].includes(char);
+}
+
+// Function to get the precedence of an operator
+function getPrecedence(operator) {
+  switch (operator) {
+    case '+':
+    case '-':
+      return 1;
+    case '*':
+    case '/':
+    case '%':
+      return 2;
+    default:
+      return 0;
+  }
+}
+
+// Function to convert infix expression to postfix expression
+function postfix(infixExpression) {
+  let output = [];    // Output array to store the result
+  let operators = []; // Stack to store operators during conversion
+
+  // Iterate through each character in the infix expression
+  for (let i = 0; i < infixExpression.length; i++) {
+    let token = infixExpression[i];
+
+    // If the token is an operand (variable or number), add it to the output
+    if (token.match(/[a-zA-Z0-9]/)) {
+      output.push(token);
+    }
+    // If the token is an operator
+    else if (isOperator(token)) {
+      // Pop operators from the stack and add them to the output until the stack is empty
+      // or the top operator has lower precedence than the current token
+      while (
+        operators.length > 0 &&
+        getPrecedence(operators[operators.length - 1]) >= getPrecedence(token)
+      ) {
+        output.push(operators.pop());
+      }
+      // Push the current token onto the stack
+      operators.push(token);
+    }
+    // If the token is an opening parenthesis, push it onto the stack
+    else if (token === '(') {
+      operators.push(token);
+    }
+    // If the token is a closing parenthesis
+    else if (token === ')') {
+      // Pop operators from the stack and add them to the output until an opening parenthesis is encountered
+      while (operators.length > 0 && operators[operators.length - 1] !== '(') {
+        output.push(operators.pop());
+      }
+      operators.pop(); // Remove the '(' from the stack
+    }
+  }
+
+  // Pop any remaining operators from the stack and add them to the output
+  while (operators.length > 0) {
+    output.push(operators.pop());
+  }
+
+  // Join the output array to get the final postfix expression
+  return output.join(' ');
+}
+
 // Add an event listener to each button
 calculatorButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -210,6 +279,10 @@ calculatorButtons.forEach((button) => {
       case 'CE':
         inputField.value = inputField.value.slice(0, -1);
         inputString = inputField.value;
+        break;
+      case 'PO':
+        var res = postfix(inputString);
+        animateValueChange(resultDisplay, res, 500);
         break;
       default:
         // Append the clicked button's value to the input field
