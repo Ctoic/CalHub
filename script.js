@@ -1,3 +1,9 @@
+/**
+ * This script handles the functionality of a calculator application.
+ * It includes event listeners for button clicks, functions to handle
+ * mathematical operations, and a countdown timer.
+ */
+
 // Initialize an empty string to store the user input
 let inputString = '';
 let mathExpression = '';
@@ -15,6 +21,10 @@ const bodyElement = document.body;
 
 const parentBox = document.querySelector('.parent');
 
+/**
+ * Generates a random linear gradient background.
+ * @returns {string} The generated linear gradient.
+ */
 function generateRandomGradient() {
   // Generate random colors
   const color1 = getRandomColor();
@@ -30,6 +40,10 @@ function generateRandomGradient() {
   return gradient;
 }
 
+/**
+ * Generates a random hexadecimal color code.
+ * @returns {string} The generated color code.
+ */
 function getRandomColor() {
   // Generate a random hexadecimal color code
   const letters = '0123456789ABCDEF';
@@ -42,16 +56,19 @@ function getRandomColor() {
 
 // Add an event listener to each button
 calculatorButtons.forEach((button) => {
+  // This event listener handles button clicks and updates the input field and math expression accordingly.
   button.addEventListener('click', () => {
     const buttonValue = button.textContent;
 
     switch (buttonValue) {
       case 'AC':
       case 'CE':
+        // Clear the input field and math expression
         inputField.value = '';
         mathExpression = '';
         break;
       case 'C':
+        // Remove the last character from the input field and math expression
         if (inputField.value.slice(-1) === ')') {
           const lastOpenParenthesisIndex = inputField.value.lastIndexOf('(');
           inputField.value = inputField.value.slice(0, lastOpenParenthesisIndex);
@@ -62,37 +79,46 @@ calculatorButtons.forEach((button) => {
         }
         break;
       case '=':
+        // Calculate and display the result
         calculateResult();
         break;
       case 'sin':
+        // Append 'sin(' to the input field and 'Math.sin(' to the math expression
         inputField.value += 'sin(';
         mathExpression += 'Math.sin(';
         break;
       case 'cos':
+        // Append 'cos(' to the input field and 'Math.cos(' to the math expression
         inputField.value += 'cos(';
         mathExpression += 'Math.cos(';
         break;
       case 'tan':
+        // Append 'tan(' to the input field and 'Math.tan(' to the math expression
         inputField.value += 'tan(';
         mathExpression += 'Math.tan(';
         break;
       case 'log':
+        // Append 'log(' to the input field and 'Math.log(' to the math expression
         inputField.value += 'log(';
         mathExpression += 'Math.log(';
         break;
       case 'sqrt':
+        // Append 'sqrt(' to the input field and 'Math.sqrt(' to the math expression
         inputField.value += 'sqrt(';
         mathExpression += 'Math.sqrt(';
         break;
       case '^':
+        // Append '^' to the input field and '**' to the math expression
         inputField.value += '^';
         mathExpression += '**';
         break;
       case 'π':
+        // Append 'π' to the input field and 'Math.PI' to the math expression
         inputField.value += 'π';
         mathExpression += 'Math.PI';
         break;
       case 'e':
+        // Append 'e' to the input field and 'Math.E' to the math expression
         inputField.value += 'e';
         mathExpression += 'Math.E';
         break;
@@ -105,7 +131,9 @@ calculatorButtons.forEach((button) => {
   });
 });
 
-// Function to calculate and display the result
+/**
+ * Calculates and displays the result of the math expression.
+ */
 function calculateResult() {
   try {
     // Evaluate the math expression using eval
@@ -131,6 +159,12 @@ function calculateResult() {
   }
 }
 
+/**
+ * Animates the value change in the result display.
+ * @param {HTMLElement} element - The element to animate.
+ * @param {number} end - The end value.
+ * @param {number} duration - The duration of the animation in milliseconds.
+ */
 function animateValueChange(element, end, duration) {
   let startValue = parseFloat(element.value) || 0; // Start from the current value
   let startOpacity = 0; // Start from opacity 0
