@@ -81,6 +81,18 @@ function animateValueChange(element, end, duration) {
 }
 
 
+//It is the  Function to change theme
+function changeTheme(theme) {
+  //It will remove existing theme classes from the body
+  document.body.classList.remove('dark-theme', 'light-theme');
+  
+  //It will add the selected theme class to the body
+  if (theme === 'dark') {
+      document.body.classList.add('dark-theme');
+  } else if (theme === 'light') {
+      document.body.classList.add('light-theme');
+  }
+}
 
 // Function to calculate and display the result
 function calculateResult() {

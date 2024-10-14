@@ -398,3 +398,53 @@ body {
   background-clip: text;
   margin-top: 80px;
 }
+
+/* style for theme-selector*/ 
+/* It is for the default theme */
+body {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/*It is for the dark theme*/
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.container-calculator.dark-theme {
+  background-color: #444;
+  border-color: #555;
+}
+
+/*It is for the light theme */
+body.light-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+.container-calculator.light-theme {
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+/*It for  style the buttons for themes*/ 
+button {
+  background-color: #ddd;
+  color: #000;
+}
+
+body.dark-theme button {
+  background-color: #555;
+  color: #fff;
+}
+
+body.light-theme button {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+
+
+
