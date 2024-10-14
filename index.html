@@ -21,6 +21,16 @@
     </div>
     <div class="container-calculator">
       <h1 class="title">Calculator For You</h1>
+
+      <div class="theme-selector">
+        <label style="font-size: medium;color: aquamarine;" for="theme"><strong>Choose a theme:</strong></label>
+        <select id="theme" onchange="changeTheme(this.value)">
+            <option value="default">Default</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+    </div>
+
       <div class="parent">
         <div class="row display">
           <input class="input" id="screen" name="result" type="text" placeholder="0">
