@@ -257,3 +257,25 @@ var x = setInterval(function () {
     document.getElementById('timer-text').innerHTML = 'ENDED'
   }
 }, 1000)
+
+
+
+const dropdownLink = document.getElementById('navbarDropdown');
+  const dropdownMenu = dropdownLink.nextElementSibling;
+
+  dropdownLink.addEventListener('mouseenter', () => {
+    dropdownMenu.classList.remove('hidden');
+  });
+
+  dropdownLink.addEventListener('mouseleave', () => {
+    dropdownMenu.classList.add('hidden');
+  });
+
+  // Keep the dropdown visible when mouse is over it
+  dropdownMenu.addEventListener('mouseenter', () => {
+    dropdownMenu.classList.remove('hidden');
+  });
+
+  dropdownMenu.addEventListener('mouseleave', () => {
+    dropdownMenu.classList.add('hidden');
+  });
