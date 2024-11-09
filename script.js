@@ -258,24 +258,22 @@ var x = setInterval(function () {
   }
 }, 1000)
 
+const dropdownLink = document.getElementById('navbarDropdown')
+const dropdownMenu = dropdownLink.nextElementSibling
 
+dropdownLink.addEventListener('mouseenter', () => {
+  dropdownMenu.classList.remove('hidden')
+})
 
-const dropdownLink = document.getElementById('navbarDropdown');
-  const dropdownMenu = dropdownLink.nextElementSibling;
+dropdownLink.addEventListener('mouseleave', () => {
+  dropdownMenu.classList.add('hidden')
+})
 
-  dropdownLink.addEventListener('mouseenter', () => {
-    dropdownMenu.classList.remove('hidden');
-  });
+// Keep the dropdown visible when mouse is over it
+dropdownMenu.addEventListener('mouseenter', () => {
+  dropdownMenu.classList.remove('hidden')
+})
 
-  dropdownLink.addEventListener('mouseleave', () => {
-    dropdownMenu.classList.add('hidden');
-  });
-
-  // Keep the dropdown visible when mouse is over it
-  dropdownMenu.addEventListener('mouseenter', () => {
-    dropdownMenu.classList.remove('hidden');
-  });
-
-  dropdownMenu.addEventListener('mouseleave', () => {
-    dropdownMenu.classList.add('hidden');
-  });
+dropdownMenu.addEventListener('mouseleave', () => {
+  dropdownMenu.classList.add('hidden')
+})
