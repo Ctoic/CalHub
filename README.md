@@ -47,6 +47,12 @@ Additionally, you can employ the "C" button to clear the input fields or the "DE
 
 This project was thoughtfully created by Najam Ali Abbas as part of an Introduction to Web Development course initiated by the Blockchain Society. Special thanks to the Brilliant HactoberFest Contributors. 
 
+## Stars 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ctoic/CalHub&type=Date)](https://www.star-history.com/#Ctoic/CalHub&Date)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE), providing the freedom to utilize and adapt the code to meet your specific requirements.
